@@ -222,6 +222,193 @@
               <div class="form-registration w-100">
                 <form
                   method="post"
+                  action="/pendaftaran-bnsp"
+                  class="mb-2"
+                  enctype="multipart/form-data"
+                >
+                  <div class="pt-2 pb-2 mb-2 subtitle">
+                    <h4 class="text-capitalize mb-2">Data Materi Training</h4>
+                  </div>
+                  <div class="mb-3">
+                    <label for="program" class="form-label"
+                      >Topik Pelatihan <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="program"
+                      name="program"
+                      required=""
+                      value=""
+                    />
+                  </div>
+                  <div class="d-md-flex pt-2 pb-2 mb-2">
+                    <div class="total-of-participant w-100 mb-2 mb-md-0">
+                      <label for="total-of-participant" class="form-label"
+                        >Jumlah Peserta
+                        <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="total-of-participant"
+                        name="total-of-participant"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div class="d-md-flex pt-2 pb-2 mb-2">
+                    <div class="participants w-100 mb-2 mb-md-0">
+                      <label for="participants" class="form-label"
+                        >Nama Peserta Yang Didaftarkan
+                        <span class="text-danger">*</span></label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="participants"
+                        name="participants"
+                        value=""
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="pt-2 pb-2 mb-2 subtitle">
+                    <h4 class="text-capitalize mb-2">Personal Data</h4>
+                  </div>
+                  <div class="d-md-flex pt-2 pb-2 mb-2">
+                    <div class="name w-100 mb-2 mb-md-0">
+                      <label for="name" class="form-label"
+                        >Nama <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                    <div class="mb-3" hidden="">
+                      <input
+                        type="text"
+                        placeholder="Slug"
+                        class="form-control"
+                        id="slug"
+                        name="slug"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                    <div class="job-position w-100">
+                      <label for="job-position" class="form-label"
+                        >Jabatan <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="job-position"
+                        name="job-position"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div class="d-md-flex pt-2 pb-2 mb-2">
+                    <div class="company w-100">
+                      <label for="company" class="form-label"
+                        >Asal Perusahaan</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="company"
+                        name="company"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-2">
+                    <label for="company_address" class="form-label"
+                      >Alamat Perusahaan</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="company_address"
+                      name="company_address"
+                      value=""
+                    ></textarea>
+                  </div>
+                  <div class="d-md-flex pt-2 pb-2 mb-2">
+                    <div class="company-email w-100 mb-2 mb-md-0">
+                      <label for="company-email" class="form-label">
+                        Email Perusahaan
+                        <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="company-email"
+                        name="company-email"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                    <div class="email w-100 mb-2 mb-md-0">
+                      <label for="email" class="form-label">
+                        Email Alternatif
+                        <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div class="d-md-flex pt-2 pb-2 mb-2">
+                    <div class="telephone w-100">
+                      <label for="telephone" class="form-label"
+                        >Nomor Telepon Kantor
+                        <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="telephone"
+                        name="telephone"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                    <div class="phone w-100">
+                      <label for="phone" class="form-label"
+                        >Nomor Handphone
+                        <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <button type="submit" class="btn btn-primary py-3 px-5">
+                      <i class="ri-save-3-line me-1"></i>Daftar
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- <div class="form-registration w-100">
+                <form
+                  method="post"
                   action="/permohonan-inhouse-training"
                   class="mb-2"
                   enctype="multipart/form-data"
@@ -392,7 +579,7 @@
                     </button>
                   </div>
                 </form>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

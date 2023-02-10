@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrator | Pusat Pelatihan K3</title>
+
+    <!-- Icon -->
+    <link rel="icon" href="../images/logo.png" type="image/x-icon" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Slick -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Datatables -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../plugins/datatables/datatables.min.css"
+    />
+
+    <link rel="stylesheet" href="../plugins/summernote/summernote-lite.css" />
+
+    <!-- Pusat Pelatihan K3 Style -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Sidebar Start -->
+    <div class="sidebar position-fixed top-0 bottom-0 bg-white border-end">
+      <div class="d-flex align-items-center p-3">
+        <a href="#" class="sidebar-logo">
+          <img src="../images/logo.png" alt="Pusat Pelatihan K3" />
+        </a>
+        <i
+          class="sidebar-toggle fa-regular fa-circle-left ms-auto fs-5 d-none d-md-block"
+        ></i>
+      </div>
+      <ul class="sidebar-menu p-3 m-0 mb-0">
+        <li class="sidebar-menu-divider mt-3 mb-1 text-uppercase">Form</li>
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-solid fa-envelope sidebar-menu-item-icon"></i>
+            Pesan</a
+          >
+        </li>
+        <!-- <li class="sidebar-menu-divider mt-3 text-uppercase">Custom</li> -->
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-solid fa-user-tie sidebar-menu-item-icon"></i> Inhouse
+          </a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-solid fa-people-group sidebar-menu-item-icon"></i>
+            Public
+          </a>
+        </li>
+        <li class="sidebar-menu-item active">
+          <a href="#">
+            <i class="fa-solid fa-k sidebar-menu-item-icon"></i> Kemnaker
+          </a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-solid fa-b sidebar-menu-item-icon"></i> BNSP
+          </a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-solid fa-s sidebar-menu-item-icon"></i> Softskill
+          </a>
+        </li>
+        <li class="sidebar-menu-divider mt-3 mb-1 text-uppercase">Pelatihan</li>
+        <li class="sidebar-menu-item">
+          <a href="all-programs.html">
+            <i class="fa-regular fa-file-lines sidebar-menu-item-icon"></i>
+            Program</a
+          >
+        </li>
+        <li class="sidebar-menu-item d-none">
+          <a href="#">
+            <i class="fa-solid fa-rupiah-sign sidebar-menu-item-icon"></i>
+            Biaya
+          </a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-solid fa-calendar-days sidebar-menu-item-icon"></i>
+            Jadwal
+          </a>
+        </li>
+
+        <li class="sidebar-menu-divider mt-3 mb-1 text-uppercase">Blog</li>
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-solid fa-rectangle-list sidebar-menu-item-icon"></i>
+            Kategori
+          </a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-regular fa-newspaper sidebar-menu-item-icon"></i>
+            Artikel
+          </a>
+        </li>
+
+        <li class="sidebar-menu-divider mt-3 mb-1 text-uppercase">Staff</li>
+        <li class="sidebar-menu-item">
+          <a href="#">
+            <i class="fa-solid fa-users-rectangle sidebar-menu-item-icon"></i>
+            Customer Service
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <!-- Sidebar End -->
+
+    <!-- main wrapper start -->
+    <div class="admin-wrapper bg-light">
+      <div class="p-2">
+        <!-- navbar start -->
+        <nav class="px-3 py-2 bg-white rounded shadow">
+          <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+          <h5 class="fw-bold mb-0 me-auto">
+            Pendaftar Sertifikasi Kemnaker RI
+          </h5>
+          <div class="dropdown">
+            <div
+              class="d-flex align-items-center cursor-pointer dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="me-2 d-none d-sm-block">Admin PPK3</span>
+              <img
+                class="navbar-profile-image"
+                src="../images/logo.png"
+                alt="user-img"
+              />
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- kemnaker start -->
+        <div
+          class="kemnaker-section section-padding px-3 py-2 bg-white rounded"
+        >
+          <div class="row">
+            <div class="col-12 bg-white m-auto">
+              <table
+                id="kemnaker"
+                class="table table-striped m-auto"
+                width="100%"
+              >
+                <thead>
+                  <tr>
+                    <th width="5%">No</th>
+                    <th>Nama</th>
+                    <th>Program</th>
+                    <th>Perusahaan</th>
+                    <th>Email Kantor</th>
+                    <th>No.Telp Kantor</th>
+                    <th>Status Follow Up</th>
+                    <th width="24%" class="h-100 overflow-hidden">Opsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Lorem, ipsum dolor.</td>
+                    <td>Kemnaker</td>
+                    <td>Lorem, ipsum dolor.</td>
+                    <td>loremipsum@gmail.com</td>
+                    <td>02187856464</td>
+                    <td>
+                      <span class="badge rounded-pill bg-success">Sudah</span>
+                    </td>
+                    <td class="option-item d-flex">
+                      <a
+                        href="/dashboard/kemnaker/{{ $kemnaker->slug }}"
+                        class="btn btn-warning btn-sm m-auto"
+                      >
+                        <i class="fa-solid fa-eye me-1"></i>Lihat
+                      </a>
+                      <a
+                        href="/dashboard/kemnaker/{{ $kemnaker->slug }}/edit"
+                        class="btn btn-secondary btn-sm m-auto"
+                      >
+                        <i class="fa-solid fa-pencil me-1"></i> Edit
+                      </a>
+                      <a class="btn btn-danger btn-sm m-auto">
+                        <i class="fa-solid fa-trash-can me-1"></i> Hapus
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- kemnaker end -->
+      </div>
+    </div>
+    <!-- main wrapper end -->
+
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Slick -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="plugins/slick-animation/slick-animation.min.js"></script>
+    <!-- Color Box -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"
+      integrity="sha512-DAVSi/Ovew9ZRpBgHs6hJ+EMdj1fVKE+csL7mdf9v7tMbzM1i4c/jAvHE8AhcKYazlFl7M8guWuO3lDNzIA48A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Shuffle -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"
+      integrity="sha512-DAVSi/Ovew9ZRpBgHs6hJ+EMdj1fVKE+csL7mdf9v7tMbzM1i4c/jAvHE8AhcKYazlFl7M8guWuO3lDNzIA48A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.1.0/shuffle.min.js"
+      integrity="sha512-r8mIpk3ypCMwNxH6srRZGbjHQlOFt3Mq2vrZ/iymx6g9JUqTeVavofeX6gbrxAC74X5HmBy5gxyhCm6OiXrM0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Pelatihan K3 -->
+    <script src="../js/script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="../plugins/datatables/datatables.min.js"
+    ></script>
+    <script src="../plugins/summernote/summernote-lite.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#kemnaker").DataTable({
+          scrollX: true,
+          screenX: true,
+          language: {
+            url: "https://cdn.datatables.net/plug-ins/1.12.1/i18n/id.json",
+            sEmptyTable: "Pendaftar Sertifikasi Kemnaker RI Tidak Ditemukan",
+          },
+          responsive: true,
+          deferRender: true,
+          scroller: true,
+        });
+      });
+    </script>
+  </body>
+</html>

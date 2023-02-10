@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Peserta Pembinaan | Intan Cahaya Mandiri</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icon -->
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="css/animate.min.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/datatables.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-responsive-dt/2.3.0/responsive.dataTables.min.css"
+      integrity="sha512-1rs6CKPyMyWNKKt18TIfaktqZaIkCUK4mGE78D3tI+yu0CVk/ou/XTwikeo2utvOOOdkYpcyA268IyZ17aXOWg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/admin.css" />
+    <!-- <link rel="stylesheet" href="css/admin-res.css" /> -->
+  </head>
+
+  <body class="admin-panel js-admin-panel">
+    <!-- page loader start -->
+    <div class="page-loader js-page-loader">
+      <div></div>
+    </div>
+    <!-- page loader end -->
+
+    <!-- Sidebar Start -->
+    <div class="sidebar position-fixed top-0 bottom-0 bg-white border-end">
+      <div class="d-flex align-items-center p-3">
+        <a href="#" class="sidebar-logo">
+          <img src="img/logo.png" alt="brand-logo" />
+        </a>
+        <i
+          class="sidebar-toggle fa-regular fa-circle-left ms-auto fs-5 d-none d-md-block"
+        ></i>
+      </div>
+      <ul class="sidebar-menu p-3 m-0 mb-0">
+        <li class="sidebar-menu-item">
+          <a href="admin-dashboard.html"
+            ><i class="ri-dashboard-line sidebar-menu-item-icon"></i>
+            Dashboard</a
+          >
+        </li>
+        <!-- <li class="sidebar-menu-divider mt-3 text-uppercase">Custom</li> -->
+        <li class="sidebar-menu-item">
+          <a href="admin-profile.html">
+            <i class="ri-account-box-line sidebar-menu-item-icon"></i> Profil
+          </a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="admin-program.html">
+            <i class="ri-file-list-3-line sidebar-menu-item-icon"></i> Program
+          </a>
+        </li>
+        <li class="sidebar-menu-item active">
+          <a href="admin-peserta.html">
+            <i class="ri-team-line sidebar-menu-item-icon"></i> Peserta
+          </a>
+        </li>
+        <li class="sidebar-menu-divider mt-3 mb-1 text-uppercase">Blog</li>
+        <li class="sidebar-menu-item">
+          <a href="admin-category.html">
+            <i class="ri-list-check-2 sidebar-menu-item-icon"></i> Kategori
+          </a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="admin-article.html">
+            <i class="ri-pages-line sidebar-menu-item-icon"></i> Artikel
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <!-- Sidebar End -->
+
+    <!-- main wrapper start -->
+    <div class="main-wrapper bg-light">
+      <div class="p-2">
+        <!-- navbar start -->
+        <nav class="px-3 py-2 bg-white rounded shadow">
+          <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+          <h5 class="fw-bold mb-0 me-auto">Peserta Pembinaan</h5>
+          <div class="dropdown me-3 d-none d-sm-block">
+            <div
+              class="cursor-pointer dropdown-toggle navbar-link"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="ri-notification-line"></i>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div
+              class="d-flex align-items-center cursor-pointer dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="me-2 d-none d-sm-block">Admin ICM</span>
+              <img
+                class="navbar-profile-image"
+                src="img/favicon.png"
+                alt="user-img"
+              />
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profil</a></li>
+              <hr />
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- peserta start -->
+        <div class="peserta-section section-padding px-3 py-2 bg-white rounded">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-end">
+                <a
+                  href="admin-add-peserta.html"
+                  type="button"
+                  class="btn btn-success"
+                  style="margin-bottom: 20px"
+                >
+                  <i class="ri-add-line"></i> Tambah Peserta
+                </a>
+              </div>
+            </div>
+            <div class="col bg-white m-auto">
+              <table
+                id="peserta"
+                class="table table-striped dt-responsive nowrap"
+                width="100%"
+              >
+                <thead>
+                  <tr>
+                    <th width="5%">No</th>
+                    <th>Nama Peserta</th>
+                    <th>Program Pembinaan</th>
+                    <th>Perusahaan</th>
+                    <th>Status Sertifikat</th>
+                    <th width="14%">Opsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Juru Las</td>
+                    <td>PT</td>
+                    <td>Diterbitkan</td>
+                    <td class="option-item d-flex">
+                      <a
+                        href="admin-edit-peserta.html"
+                        class="btn btn-primary btn-sm"
+                        ><i class="ri-edit-2-line me-1"></i> Edit</a
+                      >
+                      <a href="#" class="btn btn-danger btn-sm p-auto m-auto"
+                        ><i class="ri-delete-bin-line me-1"></i> Hapus</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Juru Las</td>
+                    <td>PT</td>
+                    <td>Diterbitkan</td>
+                    <td class="option-item d-flex">
+                      <a
+                        href="admin-edit-peserta.html"
+                        class="btn btn-primary btn-sm"
+                        ><i class="ri-edit-2-line me-1"></i> Edit</a
+                      >
+                      <a href="#" class="btn btn-danger btn-sm p-auto m-auto"
+                        ><i class="ri-delete-bin-line me-1"></i> Hapus</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Juru Las</td>
+                    <td>PT</td>
+                    <td>Diterbitkan</td>
+                    <td class="option-item d-flex">
+                      <a
+                        href="admin-edit-peserta.html"
+                        class="btn btn-primary btn-sm"
+                        ><i class="ri-edit-2-line me-1"></i> Edit</a
+                      >
+                      <a href="#" class="btn btn-danger btn-sm p-auto m-auto"
+                        ><i class="ri-delete-bin-line me-1"></i> Hapus</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- peserta end -->
+      </div>
+    </div>
+    <!-- main wrapper end -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-responsive-dt/2.3.0/responsive.dataTables.min.js"
+      integrity="sha512-GrZzESNpIKP9ZeNPe8OlK8RHUjN29Q0SLJDSkQK1A0V7TtYhjGGbun+Tb1zGDIEWXzPsaHlxp7Y91u08xbfEhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    >
+    <script src="js/admin.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#peserta").DataTable({
+          scrollX: true,
+          language: {
+            url: "https://cdn.datatables.net/plug-ins/1.12.1/i18n/id.json",
+            sEmptyTable: "Tidads",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
